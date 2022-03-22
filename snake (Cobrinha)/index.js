@@ -106,4 +106,4 @@ function jogo(){
     }
 } 
 
-// By: Codezinho.
+// By: Annext.
