@@ -6,8 +6,8 @@ window.onload = function(){
                 V    */
 
     snake = [];
-    positionX = 10;
-    positionY = 10;
+    positionX = 8;
+    positionY = 7;
     foodX = 15;
     foodY = 15;
     velX = 0;
@@ -44,10 +44,10 @@ window.onload = function(){
                 break;
         }
     })
-} 
+}
 
 function jogo(){
-    ctx.fillStyle = "#2980B9"
+    ctx.fillStyle = "black"
     
     ctx.fillRect(0,0, canvas.width, canvas.height);
 
@@ -75,11 +75,11 @@ function jogo(){
     /*Configuração da cobra ||
                             V   */
 
-        ctx.fillStyle = "#00f102";
+        ctx.fillStyle = "white";
         for(let i=0;i < snake.length;i++){
             ctx.fillRect(snake[i].x*grid, snake[i].y*grid, grid-1, grid-1);
             if(snake[i].x == positionX && snake[i].y == positionY){
-                tam = 3;
+                tam = 2;
         }
     }
 
@@ -91,7 +91,7 @@ function jogo(){
         snake.shift(); //(shift) tira o primeiro valor do Array.
     }
 
-    //Comida 
+    //Comida da bixa
 
     ctx.fillStyle = "#F1C40F";
     ctx.fillRect(foodX*grid, foodY*grid, grid-1, grid-1);
